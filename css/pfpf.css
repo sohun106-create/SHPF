@@ -323,6 +323,9 @@ body {
     margin: 0;
 }
 
+.work-info {
+    margin-top: 40px;
+}
 .mySwiper {
     width: 80%;
     height: 100vh;
@@ -338,7 +341,7 @@ body {
 
 .slide-inner {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     padding: 80px;
     position: relative;
 }
@@ -349,10 +352,35 @@ body {
     margin-bottom: 30px;
 }
 
+.slide3 .slide-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.slide3 .slide-inner h2 {
+    width: 100%;
+}
+
+.slide3 video {
+    width: 28%;
+    max-height: 45vh; /* 화면 높이의 45% 이상 커지지 않게 제한 */
+    height: auto;
+    display: block;
+}
+
 .slide4 img {
     width: 300px;
     display: block;
     margin-top: 30px;
+}
+
+.slide5 video {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .slide1 {
@@ -451,20 +479,31 @@ body {
     gap: 40px;
 }
 
-.poster img {
+/* .poster img {
     width: 40%;
-}
+} */
 
 .cardnews {
     display: flex;
-    justify-content: center;
-    gap: 30px;
     flex-wrap: wrap;
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: flex-start;  /* 세로 기준 위쪽 정렬 */
+    align-content: flex-start; /* 여러 줄일 때 위쪽으로 바짝 붙임 */
+    gap: 8px; /* 이미지 사이의 간격 */
+    width: 100%;
 }
 
 .cardnews img {
-    width: 25%;
+    max-height: 25vh;
+    object-fit: contain;
 }
+.poster img {
+    max-height: 40vh;
+    object-fit: contain;
+}
+/* .cardnews img {
+    width: 25%;
+} */
 
 .video {
     display: flex;
@@ -488,9 +527,22 @@ body {
     width: 25%;
 }
 
-.youtube {
-    position: fixed;
-    z-index: 9999;
+.YOUTUBE {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+}
+
+.YOUTUBE iframe {
+    flex: 1 1 350px;
+    max-width: 450px;
+    max-height: 45vh; /* 유튜브도 너무 커지지 않게 제한 */
+    aspect-ratio: 16 / 9;
+    height: auto;
+    display: block;
 }
 .notion {
     position: fixed;
@@ -881,6 +933,28 @@ body {
         bottom: 150px;
         right: 15%;
     }
+
+     .YOUTUBE {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px; /* 영상 간격 */
+        width: 100%;
+    }
+
+    /* 유튜브 iframe 크기를 대폭 줄여서 2줄로 정렬되게 함 */
+    .YOUTUBE iframe {
+        width: calc(50% - 6px) !important; /* 한 줄에 2개씩 들어가도록 설정 (3번째 영상은 자동으로 아랫줄로 감) */
+        max-width: 250px !important;       /* 너무 커지지 않게 최대 크기 제한 */
+        aspect-ratio: 16 / 9;
+        height: auto !important;
+    }
+    
+    /* 만약 3번째 영상이 아랫줄 중앙에 예쁘게 오게 하고 싶다면 아래 내용 추가 */
+    .YOUTUBE iframe:nth-child(3) {
+        width: 100% !important;
+        max-width: 240px !important;
+    }
 }
 
 @media screen and (max-width:425px) {
@@ -952,7 +1026,9 @@ body {
     .nav-gacha img {
         display: none;
     }
-
+    .work-info p {
+        font-size: 10px; /* 모바일에서 더 아담하게 보이고 싶을 때 */
+    }
     .mySwiper {
         width: 10%
     }
@@ -972,23 +1048,44 @@ body {
     }
     
     .cardnews {
-        gap: 10px;
+        display: flex;
+        flex-wrap: wrap; /* 공간이 부족하면 줄바꿈 */
+        justify-content: center;
+        gap: 6px; /* 이미지 간격 */
+        width: 100%;
     }
 
     .cardnews img {
-        width: 45%;
+        width: calc(33.333% - 4px); /* 한 줄에 3개씩 들어가도록 조정 (원하시면 48%로 해서 2개씩도 가능) */
+        max-width: 100px;         /* 이미지 최대 크기 제한 */
+        height: auto;
     }
 
-    .poster {
-        gap: 15px;
-        flex-direction: column;
+    .slide2 .poster {
+        display: flex;
+        flex-direction: row; /* 가로 방향 나열 */
+        justify-content: center;
         align-items: center;
+        gap: 10px; /* 이미지 사이의 간격 */
+        width: 100%;
     }
 
-    .poster img {
-        width: 55%;
+    .slide2 .poster img {
+        width: calc(50% - 5px); /* 화면 폭에 맞춰 나란히 2개 들어가도록 분할 */
+        max-width: 180px;      /* 너무 커지지 않게 제한 */
+        height: auto;
+    }
+    .YOUTUBE {
+        gap: 15px; /* 영상 간격 줄임 */
     }
 
+    /* 유튜브 iframe 크기를 대폭 줄여서 아래 글자가 보이게 함 */
+    .YOUTUBE iframe {
+        width: 100% !important;
+        max-width: 280px !important; /* 가로 최대 크기를 더 작게 제한 */
+        height: auto !important;
+        aspect-ratio: 16 / 9;
+    }
     .video {
         flex-direction: column;
         gap: 20px;
@@ -1020,7 +1117,7 @@ body {
     .section2 .gacha-wrap {
         top: 20%;
     }
-}
+} 
 
 @media screen and (max-width:375px) {
 
@@ -1127,9 +1224,17 @@ body {
     }
 
     .poster img {
-        width: 55%;
+        width: 50%;
     }
-
+    .slide3 video:nth-of-type(1),
+    .slide3 video:nth-of-type(2) {
+        width: 40% !important;
+        max-width: 130px !important;
+    }
+    .slide3 video:nth-of-type(3) {
+        width: 75% !important;
+        max-width: 180px !important;
+    }
     .video {
         flex-direction: column;
         gap: 20px;
@@ -1138,7 +1243,7 @@ body {
 
     .video iframe {
         width: 100%;
-        height: 220px;
+        height: 100%;
     }
 
     .tools {
@@ -1160,6 +1265,21 @@ body {
     }
     .section2 .gacha-wrap {
         top: 20%;
+    }
+    .YOUTUBE {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px; /* 간격을 더 좁게 조절 */
+        width: 50%;
+    }
+
+    /* 375px 화면에서는 영상을 더 작게 줄여서 2줄(또는 1열)로 배치하고 글자 공간 확보 */
+    .YOUTUBE iframe {
+        width: 100% !important;     /* 세로로 하나씩 꽉 차게 혹은 작게 배치 */
+        max-width: 240px !important; /* 최대 크기를 240px로 제한하여 화면에 쏙 들어가게 함 */
+        aspect-ratio: 16 / 9;
+        height: auto !important;
     }
 }
 
