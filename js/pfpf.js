@@ -89,7 +89,19 @@ $(function () {
     $(".section2 .ball-hitbox").click(function () {
         $(".popup-wrap").fadeIn();
     });
+    $(document).ready(function() {
+    // 1. '작업 설명 보기' 버튼을 누르면 모달 창 열기
+    $('.work-info-btn').on('click', function(e) {
+        e.stopPropagation(); // 이벤트 버블링 방지
+        // 현재 슬라이드 안에 있는 모달을 켬 (여러 슬라이드에 쓸 경우 대비)
+        $(this).siblings('.work-info-modal').addClass('active');
+    });
 
+    // 2. 모달 창(배경 또는 내부 박스) 아무 곳이나 누르면 닫히기
+    $('.work-info-modal').on('click', function() {
+        $(this).removeClass('active');
+    });
+});
 
     // popup1 닫기
 $(".popup1").click(function () {

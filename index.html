@@ -32,9 +32,7 @@
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"
         integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
 
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
 
     <script src="js/pfpf.js" defer></script>
 </head>
@@ -57,9 +55,7 @@
 
     <p class="title">PORT FOLIO</p>
 
-
     <img src="images/profile.png" alt="" class="popup popup1">
-
 
     <section class="nav-section">
         <h2 class="nav-title">CONTENTS</h2>
@@ -98,7 +94,6 @@
         </div>
     </section>
 
-
     <section class="slide-section">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -113,12 +108,22 @@
                             <img src="images/Artboard 5.png" alt="">
                             <img src="images/Artboard 10.png" alt="">
                         </div>
-                        <div class="work-info">
-                            <p><strong>작업명 :</strong> 카드뉴스 디자인</p>
-                            <p><strong>작업기간 :</strong> 약 1주</p>
-                            <p><strong>사용툴 :</strong> Photoshop · Illustrator</p>
-                            <p><strong>담당부분 :</strong> 기획 · 디자인</p>
-                            <p><strong>작업 설명 :</strong> 핵심 정보를 효과적으로 전달할 수 있도록 이미지와 텍스트를 구성하고 카드뉴스 전체 디자인을 제작했습니다.</p>
+
+                        <!-- 작업 설명 보기 버튼 -->
+                        <button type="button" class="work-info-btn">ℹ️ 작업 설명 보기</button>
+
+                        <!-- 클릭 시 뜨는 설명 팝업 박스 -->
+                        <div class="work-info-modal">
+                            <div class="work-info-content">
+                                <h3>PROJECT DESCRIPTION</h3>
+                                <p><strong>작업명 :</strong> 카드뉴스 디자인</p>
+                                <p><strong>작업기간 :</strong> 약 1주</p>
+                                <p><strong>사용툴 :</strong> Photoshop · Illustrator</p>
+                                <p><strong>담당부분 :</strong> 기획 · 디자인</p>
+                                <hr>
+                                <p><strong>작업 설명 :</strong> 대구 수성구의 명소를 마스코트 '뚜비'가 친근하게 소개하는 여행 코스 카드뉴스입니다. 명소별 특색을 살린 일러스트 요소와 직관적인 타이포그래피를 활용해 모바일 환경에서 가독성이 높도록 제작했습니다.</p>
+                                <span class="close-hint">(화면의 아무 곳이나 누르면 닫힙니다)</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -130,13 +135,20 @@
                             <img src="images/poster.jpg" alt="">
                             <img src="images/poster2.png" alt="">
                         </div>
-                        <div class="work-info">
-                            <p><strong>작업명 :</strong> 유튜브 홍보 그래픽 포스터</p>
-                            <p><strong>작업기간 :</strong> 약 1주</p>
-                            <p><strong>사용툴 :</strong> Photoshop · Illustrator</p>
-                            <p><strong>담당부분 :</strong> 기획 · 디자인</p>
-                            <p><strong>작업 설명 :</strong> 유튜브 콘텐츠의 콘셉트를 시각화하고, 시선을 끌 수 있는 그래픽 요소와 타이포그래피를 활용해 홍보 포스터를
-                                제작했습니다.</p>
+                        <!-- 작업 설명 보기 버튼 -->
+                        <button type="button" class="work-info-btn">ℹ️ 작업 설명 보기</button>
+
+                        <!-- 클릭 시 뜨는 설명 팝업 박스 -->
+                        <div class="work-info-modal">
+                            <div class="work-info-content">
+                                <h3>PROJECT DESCRIPTION</h3>
+                                <p><strong>작업명 :</strong> 유튜브 홍보 그래픽 포스터</p>
+                                <p><strong>작업기간 :</strong> 약 1주</p>
+                                <p><strong>사용툴 :</strong> Photoshop · Illustrator</p>
+                                <p><strong>담당부분 :</strong> 기획 · 디자인</p>
+                                <p><strong>작업 설명 :</strong> 채널의 콘셉트를 담은 두 가지 버전의 홍보 포스터를 제작했습니다. 아기자기한 다이어리 오브제와 다채로운 스티커 그래픽으로 키치하고 생동감 있는 분위기를 연출한 버전과, 미니멀한 타이포그래피와 여백의 미를 살려 세련되고 깔끔한 무드를 강조한 버전으로 차별화를 두어 콘텐츠의 다양한 매력을 시각화했습니다.</p>
+                                <span class="close-hint">(화면의 아무 곳이나 누르면 닫힙니다)</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -154,13 +166,29 @@
                             <source src="video/빙수1.mp4" type="video/mp4">
                         </video>
 
-                        <div class="work-info">
-                            <p><strong>작업명 :</strong> 산리오 바츠마루 × 설빙 콜라보 빙수기계 광고</p>
-                            <p><strong>작업기간 :</strong> 약 2주</p>
-                            <p><strong>사용툴 :</strong> Blender · Premiere Pro · After Effects · Photoshop · Chat GPT</p>
-                            <p><strong>담당부분 :</strong> 기획 · 이미지 제작 · 영상 편집</p>
-                            <p><strong>작업 설명 :</strong> 캐릭터와 브랜드의 콜라보레이션을 콘셉트로, 제품의 특징과 여름 시즌의 분위기를 시각화하고 블렌더와 AI를 활용해 빙수기계 광고 영상을 제작했습니다.</p>
+                        <button type="button" class="work-info-btn">ℹ️ 작업 설명 보기</button>
+
+                        <!-- 클릭 시 뜨는 설명 팝업 박스 -->
+                        <div class="work-info-modal">
+                            <div class="work-info-content">
+                                <h3>PROJECT DESCRIPTION</h3>
+                                <p><strong>작업명 :</strong> 산리오 바츠마루 × 설빙 콜라보 빙수기계 광고</p>
+                                <p><strong>작업기간 :</strong> 약 2주</p>
+                                <p><strong>사용툴 :</strong> Blender · Premiere Pro · After Effects · Photoshop · Chat GPT</p>
+                                <p><strong>담당부분 :</strong> 기획 · 이미지 제작 · 영상 편집</p>
+                                <p><strong>작업 설명 :</strong>
+                                <p>글로벌 캐릭터IP와 디저트 브랜드의 콜라보레이션을 콘셉트로 기획된 인스타그램 및 유튜브용 빙수기계 광고 콘텐츠입니다. Blender를 활용해 제품의 입체적인 디테일과 구조를 직접 모델링하고 구현했습니다.</p>
+
+                                <ul>
+                                    <li><strong>무빙 포스터</strong>: 스노우볼 안을 배경으로 설정하여 몽환적인 분위기를 연출했으며, 정지된 배경 속에서 손잡이가 돌아가고 얼음이 갈려 나오는 모션을 더해 시각적 흥미와 시원한 계절감을 극대화했습니다.</li>
+                                    <li><strong>세로형 영상</strong>: 2D 바츠마루 캐릭터가 생동감 있는 모션과 함께 화면 안으로 등장하여 시선을 사로잡고, 이어서 빙수기계가 자연스럽게 어우러지며 나란히 배치되는 컷으로 연출했습니다. 마지막에는 타이포그래피를 통해 기대감과 몰입도를 극대화했습니다. </li>
+                                    <li><strong>가로형 영상</strong>: AI를 활용하여 제품의 작동 과정을 생생하게 구현했습니다. 빙수기계의 제빙 시연과 시식 과정을 유기적으로 연결했으며, 제품 분위기와 어울리는 카피를 더해 완성도 있게 마무리했습니다.</li>
+                                </ul>
+                                </p>
+                                <span class="close-hint">(화면의 아무 곳이나 누르면 닫힙니다)</span>
+                            </div>
                         </div>
+
                     </div>
                 </div>
 
@@ -187,40 +215,46 @@
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                             </iframe>
                         </div>
-                        <div class="work-info">
-                            <p><strong>작업명 :</strong> 핑계고 하이라이트</p>
-                            <p><strong>작업기간 :</strong> 영상 1편당 약 1주</p>
-                            <p><strong>사용툴 :</strong> Premiere Pro · After Effects · Photoshop · Chat GPT</p>
-                            <p><strong>담당부분 :</strong> 영상 편집 · 자막 · 영상 효과</p>
-                            <p><strong>작업 설명 :</strong> 기존 핑계고 콘텐츠에서 주요 장면을 선별해 짧은 호흡으로 재구성하고, 자막과 영상 효과를 더해 하이라이트 영상으로
-                                재편집했습니다.</p>
+                        <!-- 작업 설명 보기 버튼 -->
+                        <button type="button" class="work-info-btn">ℹ️️ 작업 설명 보기</button>
+
+                        <!-- 클릭 시 뜨는 설명 팝업 박스 -->
+                        <div class="work-info-modal">
+                            <div class="work-info-content">
+                                <h3>PROJECT DESCRIPTION</h3>
+                                <p><strong>작업명 :</strong> 핑계고 하이라이트</p>
+                                <p><strong>작업기간 :</strong> 영상 1편당 약 1주</p>
+                                <p><strong>사용툴 :</strong> Premiere Pro · After Effects · Photoshop · Chat GPT · Illustrator</p>
+                                <p><strong>담당부분 :</strong> 영상 편집 · 자막 · 영상 효과</p>
+                                <p><strong>작업 설명 :</strong> 유튜브 '핑계고' 원본 영상의 댓글 타임코드를 분석해 핵심 장면을 선별하고, '복습' 콘셉트의 하이라이트 영상으로 기획했습니다. 특히 애프터 이펙트를 활용한 모션과 타이핑 효과로 시선을 사로잡는 오프닝을 연출했습니다.</p>
+                                <span class="close-hint">(화면의 아무 곳이나 누르면 닫힙니다)</span>
+                            </div>
                         </div>
+                       
                     </div>
                 </div>
 
                 <div class="swiper-slide slide5">
                     <div class="slide-inner">
                         <h2>TEAM PROJECT</h2>
-                        <!-- <div class="tools">
-                            <img src="images/Frame 18.png" alt="">
-                            <img src="images/Frame 23.png" alt="">
-                            <img src="images/Frame 24.png" alt="">
-                            <img src="images/Frame 25.png" alt="">
-                            <img src="images/Frame 26.png" alt="">
-                            <img src="images/Frame 27.png" alt="">
-                        </div> -->
+
                         <video loop playsinline controls>
                             <source src="video/공모전.mp4" type="video/mp4">
                         </video>
-                        <div class="work-info">
-                            <p><strong>작업명 :</strong> 2026 한화솔루션 AI 영상 공모전 <사라지지 않을 내일>
-                            </p>
-                            <p><strong>작업기간 :</strong>  08/25~09/15</p>
-                            <p><strong>사용툴 :</strong> Premiere Pro · After Effects · Chat GPT · Flow · Gemini · Dropshot
-                            </p>
-                            <p><strong>담당부분 :</strong> 기획 · 연출 · ai 이미지 생성 · ai 영상 생성 · 모션 그래픽 · 자막</p>
-                            <p><strong>작업 설명 :</strong> 동화 속 이야기를 활용해 소재의 중요성을 전달하는 AI 영상 콘텐츠를 제작했습니다. AI를 활용해 이미지와 영상을
-                                제작하고, 편집과 영상 효과를 더해 하나의 스토리로 완성했습니다.</p>
+                        <!-- 작업 설명 보기 버튼 -->
+                        <button type="button" class="work-info-btn">ℹ️ 작업 설명 보기</button>
+
+                        <!-- 클릭 시 뜨는 설명 팝업 박스 -->
+                        <div class="work-info-modal">
+                            <div class="work-info-content">
+                                <h3>PROJECT DESCRIPTION</h3>
+                                <p><strong>작업명 :</strong> 2026 한화솔루션 AI 영상 공모전 &lt;사라지지 않을 내일&gt;</p>
+                                <p><strong>작업기간 :</strong> 08/25~09/15</p>
+                                <p><strong>사용툴 :</strong> Premiere Pro · After Effects · Chat GPT · Flow · Gemini · Dropshot</p>
+                                <p><strong>담당부분 :</strong> 기획 · 연출 · ai 이미지 생성 · ai 영상 생성 · 모션 그래픽 · 자막</p>
+                                <p><strong>작업 설명 :</strong> 「소재가 사라진 대한민국」을 주제로, 아기돼지 삼형제 동화를 오마주하여 늑대의 바람에 일상의 소재들이 사라지는 상황을 연출했습니다. 보이지 않는 곳에서 우리를 지탱하는 소재의 소중함을 전달하고자 하였고, 직접 대본을 작성한 뒤, 이를 바탕으로 AI를 활용해 스토리보드 이미지 생성, 각 장면에 맞는 영상을 생성하여 완성했습니다.</p>
+                                <span class="close-hint">(화면의 아무 곳이나 누르면 닫힙니다)</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -230,7 +264,6 @@
             <div class="swiper-pagination"></div>
         </div>
     </section>
-
 
     <section class="section2">
         <div class="gacha-wrap">
@@ -244,12 +277,8 @@
         </div>
         <p class="title2">THANK YOU!</p>
 
-
-
-
         <p class="click2">← CLICK!</p>
     </section>
-
 
     <div class="popup-wrap">
         <img src="images/Frame 15.png" alt="" class="popup-img">
@@ -257,7 +286,6 @@
         <a href="https://sohyeonportfolio.notion.site/PORTFOLIO-39cb2f45e4ec80b6bd49c157e65ae386?source=copy_link"
             class="no"></a>
     </div>
-
 
     <a href="#" class="gotop"><span></span></a>
 
