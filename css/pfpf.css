@@ -1176,7 +1176,7 @@ body:has(.work-info-modal.active) .swiper-pagination {
     }
 
     .cardnews img {
-        width: calc(50% - 6px) !important;
+        width: calc(40% - 6px) !important;
         height: auto !important;
         object-fit: cover;
     }
@@ -1232,9 +1232,8 @@ body:has(.work-info-modal.active) .swiper-pagination {
     }
 
     .slide4 .YOUTUBE iframe {
-        flex: 0 1 85%;
-        width: 85% !important;
-        max-width: 100% !important;
+        flex: 0 1 65% !important;
+        max-width: 65% !important;
         min-width: 0;
         height: auto !important;
         aspect-ratio: 16 / 9 !important;
