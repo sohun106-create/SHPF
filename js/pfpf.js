@@ -89,30 +89,50 @@ $(function () {
     $(".section2 .ball-hitbox").click(function () {
         $(".popup-wrap").fadeIn();
     });
-    $(document).ready(function() {
-    // 1. '작업 설명 보기' 버튼을 누르면 모달 창 열기
-    $('.work-info-btn').on('click', function(e) {
-        e.stopPropagation(); // 이벤트 버블링 방지
-        // 현재 슬라이드 안에 있는 모달을 켬 (여러 슬라이드에 쓸 경우 대비)
-        $(this).siblings('.work-info-modal').addClass('active');
+   $(document).ready(function() {
+        // 1. '작업 설명 보기' 버튼을 누르면 모달 창 열기 + 슬라이드 잠금
+        $('.work-info-btn').on('click', function(e) {
+            e.stopPropagation();
+            $(this).siblings('.work-info-modal').addClass('active');
+            
+            if (typeof swiper !== 'undefined') {
+                swiper.allowTouchMove = false;
+            }
+        });
+
+        // 2. 모달 창 누르면 닫히기 + 슬라이드 풀기
+        $('.work-info-modal').on('click', function() {
+            $(this).removeClass('active');
+            
+            if (typeof swiper !== 'undefined') {
+                swiper.allowTouchMove = true;
+            }
+        });
     });
 
-    // 2. 모달 창(배경 또는 내부 박스) 아무 곳이나 누르면 닫히기
-    $('.work-info-modal').on('click', function() {
-        $(this).removeClass('active');
+    // popup1 열릴 때 슬라이드 잠금
+    $(".section1 .ball-hitbox").click(function () {
+        $(".popup1").fadeIn();
+        if (typeof swiper !== 'undefined') swiper.allowTouchMove = false;
     });
-});
 
-    // popup1 닫기
-$(".popup1").click(function () {
-    $(this).fadeOut();
-});
+    // popup2(또는 popup-wrap) 열릴 때 슬라이드 잠금
+    $(".section2 .ball-hitbox").click(function () {
+        $(".popup-wrap").fadeIn();
+        if (typeof swiper !== 'undefined') swiper.allowTouchMove = false;
+    });
 
-// popup2 닫기
-$(".popup-wrap").click(function () {
-    $(this).fadeOut();
-});
-});
+    // popup1 닫기 + 슬라이드 풀기
+    $(".popup1").click(function () {
+        $(this).fadeOut();
+        if (typeof swiper !== 'undefined') swiper.allowTouchMove = true;
+    });
+
+    // popup2 닫기 + 슬라이드 풀기
+    $(".popup-wrap").click(function () {
+        $(this).fadeOut();
+        if (typeof swiper !== 'undefined') swiper.allowTouchMove = true;
+    });
 // 유튜브, 노션 링크 클릭 시 부모 클릭 막기
 $(".yt, .no").click(function(e){
     e.stopPropagation();
@@ -185,4 +205,10 @@ $('.gotop').click(function (e) {
     $('html,body').animate({
         scrollTop: 0
     }, 1000)
+})
+
+// 팝업창 내부에서 터치/스크롤할 때 Swiper로 이벤트가 새어나가는 것 원천 차단
+$('.work-info-modal, .popup1, .popup-wrap').on('touchstart touchmove wheel', function(e) {
+    e.stopPropagation();
+});
 })
