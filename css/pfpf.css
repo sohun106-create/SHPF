@@ -30,7 +30,7 @@ body {
     line-height: 1;
     white-space: nowrap;
     color: #f02323;
-    z-index: 1;
+    z-index: 10;
     pointer-events: none;
     text-shadow: 0 0 15px #f02323;
 }
@@ -645,6 +645,15 @@ body:has(.work-info-modal.active) .swiper-pagination {
 }
 
 .YOUTUBE iframe {
+    flex: 0 0 450px;
+    width: 450px;
+    max-width: 450px;
+    height: 253px;
+    max-height: none;
+    display: block;
+}
+
+.YOUTUBE iframe {
     flex: 1 1 350px;
     max-width: 450px;
     max-height: 45vh; /* 유튜브도 너무 커지지 않게 제한 */
@@ -691,6 +700,7 @@ body:has(.work-info-modal.active) .swiper-pagination {
     height:8%;
     /* background:violet; */
 }
+
 
 @media screen and (max-width:1200px) {
 
@@ -1482,3 +1492,21 @@ body:has(.work-info-modal.active) .swiper-pagination {
 /* * {
     outline: 1px solid red;
 } */
+@media screen and (min-width: 1201px) {
+    .slide4 .YOUTUBE {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 30px !important;
+        width: 100% !important;
+    }
+
+    .slide4 .YOUTUBE iframe {
+        flex: 0 0 calc(50% - 15px) !important;
+        width: calc(50% - 15px) !important;
+        max-width: none !important;
+        max-height: none !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9 !important;
+    }
+}
