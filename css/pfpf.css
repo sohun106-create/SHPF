@@ -22,7 +22,7 @@ body {
 
 .title {
     position: absolute;
-    top: 32%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 25vh;
@@ -545,7 +545,7 @@ body:has(.work-info-modal.active) .swiper-pagination {
 
 .title2 {
     position: absolute;
-    top: 150px;
+    top: 90px;
     left: 55%;
     transform: translateX(-50%);
     font-size: 26vh;
@@ -654,11 +654,12 @@ body:has(.work-info-modal.active) .swiper-pagination {
 }
 
 .YOUTUBE iframe {
-    flex: 1 1 350px;
-    max-width: 450px;
-    max-height: 45vh; /* 유튜브도 너무 커지지 않게 제한 */
+    flex: 0 1 400px;
+    width: 400px;
+    max-width: 400px;
+    height: 225px;
+    max-height: 225px;
     aspect-ratio: 16 / 9;
-    height: auto;
     display: block;
 }
 .notion {
@@ -1497,16 +1498,15 @@ body:has(.work-info-modal.active) .swiper-pagination {
         display: flex !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 30px !important;
+        gap: 25px 30px !important;
         width: 100% !important;
     }
 
     .slide4 .YOUTUBE iframe {
-        flex: 0 0 calc(50% - 15px) !important;
-        width: calc(50% - 15px) !important;
-        max-width: none !important;
-        max-height: none !important;
-        height: auto !important;
-        aspect-ratio: 16 / 9 !important;
+        flex: 0 0 400px !important;
+        width: 400px !important;
+        max-width: 400px !important;
+        height: 225px !important;
+        max-height: 225px !important;
     }
 }
